@@ -1,0 +1,14 @@
+.storeContainer {
+  font-family: Rajdhani;
+  color: var(--text);
+}
+
+.storeContainer nav button {
+  border-radius: 0rem;
+}
+
+.storeContainer div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+

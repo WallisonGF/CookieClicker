@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(9, 42, 104) !important;
+}
+
+.container {
+  background-color: rgb(236, 236, 236);
+  margin: 6rem;
+  color: var(--white);
+  font-family: Rajdhani;
+  border: 0.2rem inset white;
+  box-shadow: 0.1vw 0.1vw 50vw 1vw inset rgb(1, 51, 59);
+}
+
+footer {
+  background-color: rgb(44, 150, 55);
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: Inter;
+  font-size: .8rem;
+}
