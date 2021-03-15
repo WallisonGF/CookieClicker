@@ -1,10 +1,8 @@
-import { useAll } from "../hooks/useAll";
-import styles from "../styles/components/StoreBuy.module.css";
+import { useAll }         from "../hooks/useAll";
+import styles             from "../styles/components/StoreBuy.module.css";
 
 export default function StoreBuy({cps, price, priceUp, index}) {
   const { buyCps } = useAll();
-
-
 
   const handleBuyCps = () => {
     buyCps(cps, price);

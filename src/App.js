@@ -1,21 +1,13 @@
-import { useEffect, useState } from "react";
-import { useAll } from "./hooks/useAll";
-import CookieMoney from "./components/CookieMoney";
-import ExperienceBar from "./components/ExperienceBar";
-import Store from "./components/Store";
+import { useAll }         from "./hooks/useAll";
+import CookieMoney        from "./components/CookieMoney";
+import ExperienceBar      from "./components/ExperienceBar";
+import Store              from "./components/Store";
 import AllContextProvider from "./contexts/AllContext";
-import styles from "./styles/components/App.module.css";
+import styles             from "./styles/components/App.module.css";
 import "./styles/globals.css";
 
 export default function App() {
-  const {
-    level,
-    currentExperience,
-    experienceToNextLevel,
-    setCookies,
-    cookies,
-    cookiesPerSecond,
-  } = useAll();
+  const { level } = useAll();
 
   return (
     <AllContextProvider level={level}>

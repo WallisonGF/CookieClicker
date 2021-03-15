@@ -31,3 +31,9 @@
   transform: translateX(-50%);
   transition: left 0.4s;
 }
+
+@media (max-width: 1050px) {
+  .experienceBar {
+    margin: 1rem;
+  }
+}

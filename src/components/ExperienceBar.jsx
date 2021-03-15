@@ -1,12 +1,9 @@
-import { useAll } from "../hooks/useAll";
-import styles from "../styles/components/ExperienceBar.module.css";
+import { useAll }         from "../hooks/useAll";
+import styles             from "../styles/components/ExperienceBar.module.css";
 
 export default function Level() {
-
   const { level, currentExperience, experienceToNextLevel } = useAll();
-
   const percentToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel;
-
 
   return (
     <header className={styles.experienceBar}>

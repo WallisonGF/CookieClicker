@@ -1,7 +1,7 @@
-import CookieImage from "../assets/img/cookie.png";
-import OneMore from "../assets/img/OneMore.png";
-import { useAll } from "../hooks/useAll";
-import styles from "../styles/components/CookieMoney.module.css";
+import CookieImage        from "../assets/img/cookie.png";
+import OneMore            from "../assets/img/OneMore.png";
+import { useAll }         from "../hooks/useAll";
+import styles             from "../styles/components/CookieMoney.module.css";
 
 export default function CookieMoney(props) {
   const { toMine, cookies, cookiesPerClick, cookiesPerSecond } = useAll();

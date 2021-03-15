@@ -1,6 +1,6 @@
-import styles from "../styles/components/Store.module.css";
-import StoreBuy from "../components/StoreBuy";
-import { useState } from "react";
+import styles         from "../styles/components/Store.module.css";
+import StoreBuy       from "../components/StoreBuy";
+import { useState }   from "react";
 
 export default function Store() {
 

@@ -19,3 +19,9 @@ footer {
   font-family: Inter;
   font-size: .8rem;
 }
+
+@media (max-width: 1050px) {
+  .container {
+    margin: 0rem;
+   }
+}
