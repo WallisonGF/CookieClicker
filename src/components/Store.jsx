@@ -15,16 +15,17 @@ export default function Store() {
   ];
 
   function handleChangeNav(index) {
-    var element = document.getElementById(`btn-${index}`);
-    element.classList.add("btn-primary");
     setNavAtual(index);
-    if(element.onblur){
-      handleNavFocusOut();
-    }
-  }
-  function handleNavFocusOut(index) {
-    var element = document.getElementById(`btn-${index}`);
-    element.classList.remove("btn-primary");
+
+    {for(let i = 0; i < navs.length; i++){
+      var element = document.getElementById(`btn-${i}`);
+      if (i === index){
+        element.classList.add("btn-primary");
+      } else{
+        element.classList.remove("btn-primary");
+      }
+    }}
+
   }
 
   return (
@@ -35,25 +36,21 @@ export default function Store() {
       <nav className="nav text-light shadow">
         <button type="button" id="btn-0" className="btn nav-link shadow w-25"
           onClick={() => {handleChangeNav(0)}}
-          onBlur={() => {handleNavFocusOut(0)}}
         >
             Buy CPS's
         </button>
         <button type="button" id="btn-1" className="btn nav-link shadow w-25"
           onClick={() => {handleChangeNav(1)}}
-          onBlur={() => {handleNavFocusOut(1)}}
         >
           Buy CPC's
-          </button>
+        </button>
         <button type="button" id="btn-2" className="btn nav-link shadow w-25"
           onClick={() => {handleChangeNav(2)}}
-          onBlur={() => {handleNavFocusOut(2)}}
         >
           Settings
         </button>
         <button type="button" id="btn-3" className="btn nav-link shadow w-25"
           onClick={() => {handleChangeNav(3)}}
-          onBlur={() => {handleNavFocusOut(3)}}
         >
           Help
         </button>
