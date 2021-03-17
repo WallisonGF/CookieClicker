@@ -15,8 +15,8 @@ export default function AllContextProvider({ children}) {
   //===============================
   const [time, setTime] = useState(0.1 * 60);
   let [cookies, setCookies] = useState(100);
-  let [cookiesPerClick, setCookiesPerClick] = useState(0.50);
-  let [cookiesPerSecond, setCookiesPerSecond] = useState(0.25);
+  let [cookiesPerClick, setCookiesPerClick] = useState(1);
+  let [cookiesPerSecond, setCookiesPerSecond] = useState(0.5);
 
   //===============================
   //=======Cookie per Second=======
@@ -34,12 +34,12 @@ export default function AllContextProvider({ children}) {
   //===============================
   const [valuesCps, setValuesCps] = useState([
     { cps: 0.5, price: 50 }, //x--
-    { cps: 7.5, price: 18000 }, //x30
+    { cps: 7.5, price: 18000 }, //x15
     { cps: 300, price: 720000 }, //x40
     { cps: 21000, price: 50400000 }, //x70
   ]);
   const handlePriceUpCps = (index) => {
-    let value = (valuesCps[index].price *= 1.5);
+    let value = (valuesCps[index].price *= 1.1);
     const array = [...valuesCps];
     const index2 = valuesCps[index];
     array[index2] = { ...array[index2] };
@@ -51,12 +51,12 @@ export default function AllContextProvider({ children}) {
   //===============================
   const [valuesCpc, setValuesCpc] = useState([
     { cpc: 0.5, price: 50 }, //x--
-    { cpc: 7.5, price: 18000 }, //x30
+    { cpc: 7.5, price: 18000 }, //x15
     { cpc: 300, price: 720000 }, //x40
     { cpc: 21000, price: 50400000 }, //x70
   ]);
   const handlePriceUpCpc = (index) => {
-    let value = (valuesCpc[index].price *= 2.5);
+    let value = (valuesCpc[index].price *= 2.1);
     const array = [...valuesCpc];
     const index2 = valuesCpc[index];
     array[index2] = { ...array[index2] };

@@ -2,7 +2,7 @@ import { useAll }         from "../hooks/useAll";
 import styles             from "../styles/components/ExperienceBar.module.css";
 
 export default function Level() {
-  const { currentExperience, experienceToNextLevel } = useAll();
+  const { level, currentExperience, experienceToNextLevel } = useAll();
   const percentToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel;
 
   return (
@@ -13,7 +13,7 @@ export default function Level() {
 
         { currentExperience > 0 && (
           <span className={styles.currentExperience} style={{ left: `${percentToNextLevel}%` }}>
-            {Math.round(currentExperience)} xp
+            {Math.round(currentExperience)} xp<br></br> Level({level})
           </span>
         )}
       </div>

@@ -34,7 +34,7 @@ export default function Store() {
       {/* =========== NAVBAR =========== */}
       {/* ============================== */}
       <nav className="nav text-light shadow">
-        <button type="button" id="btn-0" className="btn nav-link shadow w-25"
+        <button type="button" id="btn-0" className="btn nav-link shadow w-25 btn-primary"
           onClick={() => {handleChangeNav(0)}}
         >
             Buy CPS's
