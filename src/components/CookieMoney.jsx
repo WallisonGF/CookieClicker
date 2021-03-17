@@ -13,11 +13,17 @@ export default function CookieMoney(props) {
   return (
     <div className={styles.cookieMoneyContainer}>
       <article>
+        {/*===============================*/}
+        {/*========= Money Info ==========*/}
+        {/*===============================*/}
         <section>
           <span>Cookies: {Math.round(cookies)}</span>
           <span>Click: {cookiesPerClick}</span>
           <span>Cps: {cookiesPerSecond}</span>
         </section>
+        {/*===============================*/}
+        {/*========= Money Click =========*/}
+        {/*===============================*/}
         <section>
           <button type="button"
             onClick={handleMine}

@@ -10,7 +10,7 @@ export default function App() {
   const { level } = useAll();
 
   return (
-    <AllContextProvider level={level}>
+    <AllContextProvider>
       <div className={styles.container}>
         <ExperienceBar />
 
@@ -18,7 +18,7 @@ export default function App() {
           <div className="col-sm-12 col-lg-6">
               <CookieMoney />
           </div>
-          <div className="col-sm-12 col-lg-5">
+          <div className="col-sm-12 col-lg-6">
               <Store />
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function App() {
         <div>
           <footer>
             <span>
-            © Copyright 2021 - All Rights Reserved - Wallison Gabriel Ferrante.
+              © Copyright 2021 - All Rights Reserved - Wallison Gabriel Ferrante.
             </span>
           </footer>
         </div>

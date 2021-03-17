@@ -1,24 +1,31 @@
 import { useAll }         from "../hooks/useAll";
 import styles             from "../styles/components/StoreBuy.module.css";
 
-export default function StoreBuy({cps, price, priceUp, index}) {
-  const { buyCps } = useAll();
+export default function StoreBuy({cps, cpc, price, priceUp, index}) {
+  const { buyCpsOrCps } = useAll();
 
-  const handleBuyCps = () => {
-    buyCps(cps, price);
-    priceUp(index);
+  const handleBuyCpsOrCpc = () => {
+    { buyCpsOrCps(cps, cpc, price) && priceUp(index)}
   }
 
   return (
     <div className={styles.storeBuyContainer}>
+      {/*===============================*/}
+      {/*========= Buy Values ==========*/}
+      {/*===============================*/}
       <button
         type="button"
         className="btn btn-info shadow-lg"
-        onClick={handleBuyCps}
+        onClick={handleBuyCpsOrCpc}
       >
         Buy<br/>{Math.round(price)}
       </button>
-      <button className="btn shadow-lg">+{cps} Cps</button>
+      {/*===============================*/}
+      {/*======== PurchaseInfo =========*/}
+      {/*===============================*/}
+      <button className="btn shadow-lg">
+        +{cps !== 0 ? cps + " Cps" : cpc + " Cpc"}
+      </button>
     </div>
   );
 }

@@ -20,7 +20,7 @@ footer {
   font-size: .8rem;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .container {
     margin: 0rem;
    }

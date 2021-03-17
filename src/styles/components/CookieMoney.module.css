@@ -1,6 +1,7 @@
 .cookieMoneyContainer {
   color: var(--text);
   font-family: Inter;
+  margin-top: 3rem;
 }
 
 .cookieMoneyContainer span {
@@ -30,7 +31,7 @@
 
 .cookieMoneyContainer section:last-child button img {
   margin-top: 2rem;
-  width: 15rem;
+  width: 20rem;
 }
 .cookieMoneyContainer section:last-child button img:last-child {
   position: absolute;
